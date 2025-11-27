@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba5n30xxvlwsn"]
+
+[ext_resource type="PackedScene" uid="uid://biwa20ttj1q82" path="res://Scenes/player.tscn" id="1_ebmjs"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(123, 99)
+scale = Vector2(10.5484, 0.883721)
