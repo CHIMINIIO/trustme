@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddgoth1lqvyhx"]
+
+[ext_resource type="Script" uid="uid://qb5vcpyx8sa0" path="res://Scripts/game.gd" id="1_uno0m"]
+[ext_resource type="PackedScene" uid="uid://c0dct0wpwuh1i" path="res://Scenes/worldboundary.tscn" id="2_anufh"]
+[ext_resource type="PackedScene" uid="uid://xf4yr7ko7mqq" path="res://Scenes/death.tscn" id="3_pk6jc"]
+[ext_resource type="PackedScene" uid="uid://biwa20ttj1q82" path="res://Scenes/player.tscn" id="4_lg50x"]
+
+[node name="Active" type="Node2D"]
+script = ExtResource("1_uno0m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+
+[node name="death" parent="." instance=ExtResource("2_anufh")]
+position = Vector2(-1, -1)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_pk6jc")]
+position = Vector2(524, 244)
+
+[node name="player" parent="." instance=ExtResource("4_lg50x")]
+position = Vector2(120, 94)
+scale = Vector2(0.982756, 0.990689)
+drag = 1.0
+
+[connection signal="hit" from="Node2D2" to="." method="_on_restart"]

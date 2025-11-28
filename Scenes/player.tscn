@@ -8,9 +8,13 @@ radius = 29.0
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
+drag = 1.2
+decel = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(13.2824, 13.6754)
+z_index = 5
+z_as_relative = false
+scale = Vector2(13, 13)
 texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
