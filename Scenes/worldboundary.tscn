@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0dct0wpwuh1i"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8atdn"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jaike"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfjuj"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvu1p"]
+normal = Vector2(-0.999774, -0.0212718)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("WorldBoundaryShape2D_8atdn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(208, 647)
+shape = SubResource("WorldBoundaryShape2D_jaike")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(153, -1)
+shape = SubResource("WorldBoundaryShape2D_yfjuj")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(1151, 243)
+shape = SubResource("WorldBoundaryShape2D_hvu1p")
