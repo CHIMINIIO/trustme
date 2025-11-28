@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://ba5n30xxvlwsn"]
+[gd_scene load_steps=3 format=3 uid="uid://ba5n30xxvlwsn"]
 
 [ext_resource type="PackedScene" uid="uid://biwa20ttj1q82" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://djyie4t8c674f" path="res://Assets/pixil-frame-0.png" id="2_qxrlw"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_ebmjs")]
 position = Vector2(123, 99)
 scale = Vector2(10.5484, 0.883721)
+
+[node name="PixilFrame0" type="Sprite2D" parent="."]
+position = Vector2(505, 151)
+scale = Vector2(36.75, 46.5)
+texture = ExtResource("2_qxrlw")
