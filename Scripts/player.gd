@@ -10,7 +10,7 @@ func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 	if input_direction:
 		is_decelerating = false
-		var k = position + Vector2(-input_direction.y, input_direction.x)
+		var k = position + 999999*Vector2(-input_direction.y, input_direction.x)
 		look_at(k)
 		velocity += input_direction * speed * ((3/2) - (input_direction.dot(velocity.normalized()))/2)
 	else:
