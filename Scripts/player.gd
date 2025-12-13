@@ -6,6 +6,9 @@ extends CharacterBody2D
 
 var is_decelerating = true
 
+func _ready():
+	Globals.player_pos = position
+
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 	if input_direction:
@@ -18,6 +21,7 @@ func get_input():
 		
 		
 func _physics_process(delta):
+	Globals.player_pos = position
 	velocity = (1 - delta*drag)*velocity
 	if is_decelerating:
 		velocity = (1 - delta*decel)*velocity
