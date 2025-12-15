@@ -8,6 +8,7 @@ var is_decelerating = true
 
 func _ready():
 	Globals.player_pos = position
+	Globals.player_vel = velocity
 
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
@@ -22,6 +23,7 @@ func get_input():
 		
 func _physics_process(delta):
 	Globals.player_pos = position
+	Globals.player_vel = velocity
 	velocity = (1 - delta*drag)*velocity
 	if is_decelerating:
 		velocity = (1 - delta*decel)*velocity
