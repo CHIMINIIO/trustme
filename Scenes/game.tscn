@@ -1,14 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba5n30xxvlwsn"]
+[gd_scene load_steps=3 format=3 uid="uid://ba5n30xxvlwsn"]
 
-[ext_resource type="Script" uid="uid://qb5vcpyx8sa0" path="res://Scripts/game.gd" id="1_3dryh"]
+[ext_resource type="Script" uid="uid://cpryp1xxoclfw" path="res://Scripts/game.gd" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://ddgoth1lqvyhx" path="res://Scenes/active.tscn" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://dk2jt8vor7028" path="res://Scripts/active.gd" id="3_wrm1d"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_3dryh")
 
 [node name="Active" parent="." instance=ExtResource("2_qxrlw")]
-scale = Vector2(0.994899, 1.00152)
-script = ExtResource("3_wrm1d")
-
-[connection signal="restart" from="Active" to="." method="_on_game_restart"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://xf4yr7ko7mqq"]
 
-[ext_resource type="Texture2D" uid="uid://dya1po5blpif5" path="res://icon.svg" id="1_g62mh"]
-[ext_resource type="Script" uid="uid://ch6dk8si20qsc" path="res://Scripts/death.gd" id="1_mna5k"]
+[ext_resource type="Script" uid="uid://30ywa0fd70iw" path="res://Scripts/death.gd" id="1_mna5k"]
+[ext_resource type="Texture2D" uid="uid://b5vrpng847e4o" path="res://Assets/death.png" id="2_mna5k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mna5k"]
 radius = 29.0
@@ -10,8 +10,9 @@ radius = 29.0
 script = ExtResource("1_mna5k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.46875, 0.460938)
-texture = ExtResource("1_g62mh")
+position = Vector2(4.7683716e-07, 1.2516975e-06)
+scale = Vector2(7.2500005, 7.2500005)
+texture = ExtResource("2_mna5k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mna5k")
